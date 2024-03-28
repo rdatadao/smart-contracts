@@ -116,7 +116,7 @@ describe("ERC20Swapper", () => {
 				.should.emit(vesting, "Claimed")
 				.withArgs(1, user1.address, rewardAmount, rewardAmount);
 
-			(await vesting.userClamAmounts(1)).should.eq(rewardAmount);
+			(await vesting.userClaimAmounts(1)).should.eq(rewardAmount);
 
 			(await rData.balanceOf(user1.address)).should.eq(user1InitialBalance + rewardAmount);
 

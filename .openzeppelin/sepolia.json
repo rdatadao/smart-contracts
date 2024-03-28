@@ -31,7 +31,7 @@
             "src": "contracts/vesting/interfaces/RDataVestingStorageV1.sol:15"
           },
           {
-            "label": "userClamAmounts",
+            "label": "userClaimAmounts",
             "offset": 0,
             "slot": "2",
             "type": "t_mapping(t_uint256,t_uint256)",

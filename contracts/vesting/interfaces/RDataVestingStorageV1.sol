@@ -14,6 +14,6 @@ abstract contract RDataVestingStorageV1 is IRDataVesting {
     address public override signerWalletAddress;
     IERC20 public override rdat;
 
-    mapping(uint256 => uint256) public override userClamAmounts;
+    mapping(uint256 => uint256) public override userClaimAmounts;
 
 }

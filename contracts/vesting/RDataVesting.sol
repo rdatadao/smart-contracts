@@ -126,7 +126,7 @@ contract RDataVesting is
             revert InvalidSignature();
         }
 
-        if (_amount <= userClamAmounts[_userId]) {
+        if (_amount <= userClaimAmounts[_userId]) {
             revert AlreadyClaimed();
         }
 
@@ -134,9 +134,9 @@ contract RDataVesting is
             revert SignatureExpired();
         }
 
-        uint256 _diffAmount = _amount - userClamAmounts[_userId];
+        uint256 _diffAmount = _amount - userClaimAmounts[_userId];
 
-        userClamAmounts[_userId] = _amount;
+        userClaimAmounts[_userId] = _amount;
 
         rdat.safeTransfer(_receiveAddress, _diffAmount);
 
