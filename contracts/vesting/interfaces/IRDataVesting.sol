@@ -8,7 +8,7 @@ interface IRDataVesting {
     function signerWalletAddress() external view returns(address);
     function rdat() external view returns(IERC20);
     function updateSignerWalletAddress(address newSignerAddress) external;
-    function userClamAmounts(uint256 usserId) external view returns(uint256);
+    function userclaimAmounts(uint256 usserId) external view returns(uint256);
     function claim(
         uint256 _userId,
         address _receiveAddress,

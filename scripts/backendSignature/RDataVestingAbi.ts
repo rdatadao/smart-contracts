@@ -475,7 +475,7 @@ export const rDataVestingAbi = [
         "type": "uint256"
       }
     ],
-    "name": "userClamAmounts",
+    "name": "userclaimAmounts",
     "outputs": [
       {
         "internalType": "uint256",
