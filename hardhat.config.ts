@@ -25,13 +25,13 @@ module.exports = {
       //   url: process.env.SEPOLIA_URL || "",
       // }
     },
-    mainnet: {
-      url: process.env.MAINNET_URL || "",
+    base: {
+      url: process.env.BASE_URL || "",
       accounts:
         process.env.DEPLOYER_PRIVATE_KEY !== undefined ? [process.env.DEPLOYER_PRIVATE_KEY] : [],
     },
-    sepolia: {
-      url: process.env.SEPOLIA_URL || "",
+    baseSepolia: {
+      url: process.env.BASE_SEPOLIA_URL || "",
       accounts:
         process.env.DEPLOYER_PRIVATE_KEY !== undefined ? [process.env.DEPLOYER_PRIVATE_KEY] : [],
     },
@@ -39,8 +39,19 @@ module.exports = {
   etherscan: {
     apiKey: {
       mainnet: process.env.ETHERSCAN_API_KEY || '',
-      sepolia: process.env.ETHERSCAN_API_KEY || ''
-    }
+      sepolia: process.env.ETHERSCAN_API_KEY || '',
+      baseSepolia: process.env.BASESCAN_APY_KEY || ''
+    },
+    customChains: [
+      {
+        network: "baseSepolia",
+        chainId: 84532,
+        urls: {
+          apiURL: process.env.BASE_SEPOLIA_API_URL || "",
+          browserURL: process.env.BASE_SEPOLIA_BROWSER_URL || ""
+        }
+      }
+    ]
   },
   paths: {
     sources: "./contracts",

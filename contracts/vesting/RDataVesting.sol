@@ -69,13 +69,6 @@ contract RDataVesting is
     ) internal override onlyOwner {}
 
     /**
-     * @notice Returns the current contract version
-     */
-    function getVersion() external pure override returns (uint256) {
-        return 1;
-    }
-
-    /**
      * @dev Pauses the contract
      */
     function pause() public onlyOwner {

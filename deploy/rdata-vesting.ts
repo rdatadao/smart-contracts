@@ -1,18 +1,19 @@
-import {ethers, upgrades} from "hardhat";
+import { ethers, upgrades } from "hardhat";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
 
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
-	const rData = await ethers.deployContract("RData");
+	const rdat = await ethers.deployContract("Rdat");
 
-	await rData.waitForDeployment();
+	await rdat.waitForDeployment();
 
-	console.log("RData token deployed at:", rData.target);
+	console.log("RDat token deployed at:", rdat.target);
+	return;
 
 	const rDataVestingDeploy = await upgrades.deployProxy(
 		await ethers.getContractFactory("RDataVesting"),
 		[
-			rData.target,
+			rdat.target,
 			process.env.BACKEND_WALLET_ADDRESS
 		],
 		{
