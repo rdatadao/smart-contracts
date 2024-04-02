@@ -19,24 +19,24 @@
             "offset": 0,
             "slot": "0",
             "type": "t_address",
-            "contract": "RDataVestingStorageV1",
-            "src": "contracts/vesting/interfaces/RDataVestingStorageV1.sol:14"
+            "contract": "RDataRewardStorageV1",
+            "src": "contracts/reward/interfaces/RDataRewardStorageV1.sol:14"
           },
           {
             "label": "rdat",
             "offset": 0,
             "slot": "1",
             "type": "t_contract(IERC20)2715",
-            "contract": "RDataVestingStorageV1",
-            "src": "contracts/vesting/interfaces/RDataVestingStorageV1.sol:15"
+            "contract": "RDataRewardStorageV1",
+            "src": "contracts/reward/interfaces/RDataRewardStorageV1.sol:15"
           },
           {
             "label": "userClaimAmounts",
             "offset": 0,
             "slot": "2",
             "type": "t_mapping(t_uint256,t_uint256)",
-            "contract": "RDataVestingStorageV1",
-            "src": "contracts/vesting/interfaces/RDataVestingStorageV1.sol:17"
+            "contract": "RDataRewardStorageV1",
+            "src": "contracts/reward/interfaces/RDataRewardStorageV1.sol:17"
           }
         ],
         "types": {

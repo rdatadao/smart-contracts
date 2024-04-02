@@ -38,11 +38,18 @@ module.exports = {
   },
   etherscan: {
     apiKey: {
-      mainnet: process.env.ETHERSCAN_API_KEY || '',
-      sepolia: process.env.ETHERSCAN_API_KEY || '',
+      base: process.env.BASESCAN_APY_KEY || '',
       baseSepolia: process.env.BASESCAN_APY_KEY || ''
     },
     customChains: [
+      {
+        network: "base",
+        chainId: 8453,
+        urls: {
+          apiURL: process.env.BASE_API_URL || "",
+          browserURL: process.env.BASE_BROWSER_URL || ""
+        }
+      },
       {
         network: "baseSepolia",
         chainId: 84532,
